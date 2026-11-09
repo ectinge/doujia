@@ -1,0 +1,9 @@
+# 系统文件
+.DS_Store
+
+# 源稿与原图（不公开）
+_post/
+
+# 写作模板与生成用数据（页面不读取）
+templates/
+content/user-pool.json

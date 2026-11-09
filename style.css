@@ -1,0 +1,90 @@
+:root{--app-width:430px;--brand:#397abe;--brand-action:#316eae;--brand-soft:#eaf2fb;--input:#f0f4f9;--canvas:#edf1f5;--text:#25282c;font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft Yahei",sans-serif}html,body{scrollbar-width:auto}button,input,textarea{font:inherit}button,a{-webkit-tap-highlight-color:transparent}button{cursor:pointer;border:0;background:none;color:inherit}a{color:inherit;text-decoration:none}button:focus-visible,a:focus-visible,input:focus-visible,textarea:focus-visible{outline:3px solid #85b9ee;outline-offset:3px}button:disabled{cursor:default}button .icon{margin:auto}.phone{width:min(100%,var(--app-width));padding-bottom:30px;box-shadow:0 5px 40px #263e5510}.sitebar{height:48px;display:flex;align-items:center;justify-content:space-between;padding:0 20px;color:#fff;background:#397abe;letter-spacing:1px}.sitebar small{font-size:11px;opacity:.75}.hero{background:linear-gradient(0deg,#397abe 20%,#397abe33),url('assets/images/cover.svg') center/cover;color:#fff;padding:18px 20px 22px}.search{display:flex;align-items:center;gap:8px;background:#ffffff29;border-radius:8px;padding:9px 12px;margin-bottom:45px}.search input{width:100%;border:0;background:none;color:white;outline:0;font-size:14px}.search input::placeholder{color:#e4edf8}.group-summary{display:flex;gap:14px;align-items:center}.group-summary>img{width:64px;height:64px;border-radius:12px}.group-summary>div{flex:1;min-width:0}.group-summary h1{margin:0 0 5px;font-size:23px}.group-summary small{color:#d1e2f5}.join{padding:9px 13px;background:#fff;color:#397abe;border-radius:8px;white-space:nowrap;font-weight:600}.intro{margin-top:18px;font-size:14px;line-height:1.8;color:#d5e5f7}.intro summary{cursor:pointer;color:white}.intro p{margin:5px 0}.compact{position:sticky;top:0;z-index:10;display:flex;align-items:center;gap:10px;background:#397abe;color:#fff;padding:10px 16px;height:64px}.home .compact{margin-top:-64px;visibility:hidden}.home.is-scrolled .compact{visibility:visible}.compact img{width:38px;height:38px;border-radius:7px}.compact>div{flex:1;min-width:0}.compact strong{display:block;font-size:15px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.compact small{font-size:11px;color:#d1e2f5}.compact .icon-btn{padding:4px}.discussion{position:sticky;top:64px;z-index:9;background:#fffffff5;display:flex;align-items:center;justify-content:space-between;padding:15px 16px;border-bottom:1px solid #eee}.discussion h2{font-size:16px;margin:0}.filters{display:flex;background:#f5f6f7;border-radius:8px;padding:2px}.filters button{padding:7px 11px;font-size:14px;color:#92979e}.filters .selected{color:#20252a;background:white;border:1px solid #d1d6dc;border-radius:7px;box-shadow:0 2px 4px #00000008}.thread{display:grid;grid-template-columns:30px minmax(0,1fr);gap:10px;padding:20px 16px 0;width:100%;text-align:left}.reply-count{color:#999;font-size:12px;text-align:center;padding-top:3px}.reply-count svg{color:#7ca7d4;fill:#7ca7d4;margin:0 auto 5px}.thread-main{border-bottom:1px solid #eee;padding-bottom:20px}.thread-copy{display:flex;align-items:flex-start;gap:12px}.thread h3{font-size:18px;line-height:1.55;font-weight:400;margin:0;flex:1;overflow-wrap:anywhere}.thread-thumb{width:82px;height:64px;object-fit:cover;border-radius:6px}.featured{font-size:12px;background:#e85e70;color:white;border-radius:4px;padding:1px 3px;margin-right:5px;vertical-align:2px}.thread-meta{display:flex;gap:7px;align-items:center;color:#92969a;font-size:12px;margin-top:12px}.thread-meta .avatar{width:21px;height:21px}.thread-meta time{color:#b3b6ba;font-size:11px}.avatar img{width:100%;height:100%;object-fit:cover}.end{text-align:center;color:#aaa;font-size:12px;padding:30px 16px}.post{padding:22px 20px}.post h1{font-size:24px}.post>header{grid-template-columns:44px 1fr auto}.post>header button{background:var(--brand-soft);color:var(--brand);padding:8px 12px;border-radius:8px}.content p{white-space:pre-wrap;overflow-wrap:anywhere}.comments{padding:0 20px}.stats{gap:24px}.bottom{width:min(100%,var(--app-width));padding-bottom:max(12px,env(safe-area-inset-bottom));grid-template-columns:1.8fr repeat(3,.6fr)}.bottom button{display:grid;justify-items:center;gap:3px;font-size:12px}.detail{padding-bottom:95px}.bottom button[aria-pressed=true],.comment button[aria-pressed=true]{color:var(--brand)}.comment footer{gap:16px}.comment footer button{display:flex;gap:5px;font-size:12px;align-items:center;color:#888}.comment header{grid-template-columns:34px 1fr}.media-shell{cursor:zoom-in}.poll-choice{cursor:pointer}.poll-choice input{accent-color:var(--brand);width:18px;height:18px}.poll button{background:var(--brand);color:white}.poll button:disabled{background:#c3d2e1;color:#fff}.poll-result{display:grid;gap:6px;font-size:14px;margin-top:12px}.link-card{width:100%;text-align:left}#toast{position:fixed;bottom:110px;left:50%;transform:translateX(-50%);z-index:100;width:min(calc(100% - 32px),calc(var(--app-width) - 32px));pointer-events:none}
+.toast-item{position:absolute;bottom:0;left:50%;transform:translate(-50%,10px);width:max-content;max-width:100%;padding:12px 20px;border-radius:9px;background:#242b32ed;color:white;font-size:14px;line-height:1.5;text-align:center;opacity:0;transition:bottom .22s ease,transform .2s ease,opacity .2s ease}
+.toast-item.visible{transform:translate(-50%,0);opacity:1}
+#viewer{position:fixed;inset:0;width:min(100%,var(--app-width));max-width:none;height:100%;height:100dvh;max-height:none;margin:0 auto;padding:0;border:0;border-radius:0;background:#000;overflow:auto;cursor:zoom-out;scrollbar-width:none}
+#viewer[open]{display:flex;flex-direction:column}
+#viewer::backdrop{background:#000}
+#viewer::-webkit-scrollbar{display:none}
+#viewer img{display:block;flex:none;width:100%;max-width:none;height:auto;margin:auto 0}
+html.viewing-image,html.viewing-image body{overflow:hidden}
+.post h1 i{display:inline-flex;align-items:center;justify-content:center;vertical-align:middle;transform:none;position:relative;top:-.08em;letter-spacing:0}
+.bottom button.reply-input{display:flex;align-items:center;justify-content:flex-start;text-align:left;padding:0 15px;font-size:14px;line-height:20px;font-weight:400}
+.composer textarea{font-size:16px;line-height:1.6;text-align:left}
+.composer textarea::placeholder{font-size:16px;color:#9ba8b5;opacity:1}
+figcaption{font-size:13px;line-height:1.5;margin-top:7px}
+.comment-gap{margin-inline:-20px}.section-divider{margin-inline:-20px}
+@media(prefers-reduced-motion:reduce){.toast-item{transition:none}}
+@media(max-width:360px){.group-summary{gap:9px}.group-summary h1{font-size:19px}.group-summary>img{width:50px;height:50px}.thread h3{font-size:16px}.thread-thumb{width:65px}.thread-meta{flex-wrap:wrap}.stats{gap:17px}}
+/* 不创建额外滚动容器，确保移动端吸顶栏相对页面吸顶。 */
+.phone{overflow:clip}.thread-meta{min-width:0}.thread-meta>span:not(.avatar){overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.thread-meta .avatar{flex-shrink:0}
+/* 主楼阅读／回复区：同一底栏内滑动淡入切换。 */
+.bottom.adaptive-bottom{display:block;padding:0;min-height:calc(72px + env(safe-area-inset-bottom));overflow:hidden}
+.bottom-mode{position:absolute;inset:0;padding:10px 16px calc(10px + env(safe-area-inset-bottom));display:grid;gap:9px;align-items:center;transition:opacity .24s ease,transform .24s ease,visibility .24s}
+.reply-actions{grid-template-columns:1.8fr repeat(3,.6fr);opacity:1;transform:translateY(0);visibility:visible}
+.bottom .reply-actions button:not(.reply-input){color:var(--text-secondary)}
+.reading-actions{grid-template-columns:repeat(4,minmax(0,1fr));opacity:0;transform:translateY(-18px);visibility:hidden;pointer-events:none}
+.bottom .reading-actions button{display:flex;align-items:center;justify-content:center;gap:6px;min-width:0;padding:9px 0;color:var(--text-secondary);font-size:14px;white-space:nowrap}
+.reading-actions button .icon{margin:0;flex:none;width:23px;height:23px}.reading-actions span{overflow:hidden;text-overflow:ellipsis}
+.adaptive-bottom.is-reading .reading-actions{opacity:1;transform:translateY(0);visibility:visible;pointer-events:auto}
+.adaptive-bottom.is-reading .reply-actions{opacity:0;transform:translateY(18px);visibility:hidden;pointer-events:none}
+.comments{scroll-margin-top:74px}.replies-end{margin:0;padding:26px 0 32px}
+.replies-end{margin-inline:-20px;background:var(--surface-muted)}
+.phone.detail{padding-bottom:0}
+.detail .replies-end{padding-bottom:calc(32px + 72px + env(safe-area-inset-bottom))}
+.home>.end{margin:0;background:var(--surface-muted)}
+.phone.home{padding-bottom:0}
+.content .link-card{display:block;min-width:0;overflow:hidden;padding:12px 14px}
+.content .link-card strong{display:block;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font-size:14px;line-height:1.5}
+.content .link-card p{display:block;margin:5px 0 0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font-size:12px;line-height:1.5}
+@media(prefers-reduced-motion:reduce){.bottom-mode{transition:none}}
+
+.poll-result{gap:8px;margin-top:16px}
+.poll-result-label{display:flex;align-items:baseline;justify-content:space-between;gap:12px;line-height:1.5}
+.poll-result-label>span:last-child{flex:none;color:var(--text-secondary);font-size:12px}
+.poll-track{height:5px;width:100%;border-radius:999px;background:#dfe8f2;overflow:hidden}
+.poll-fill{display:block;height:100%;border-radius:999px;background:var(--brand);transform-origin:left center}
+.poll:focus{outline:none}
+.content .link-card .link-title{display:flex;align-items:center;gap:6px}
+.content .link-card .link-title>span{display:block;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font-size:inherit;color:inherit}
+.content .link-card .link-title>.icon{flex:none;margin:0;color:var(--brand)}
+
+.poll button.revote{background:var(--brand-soft);color:var(--brand);border:1px solid #cbddef}
+
+/* Slide over：底页固定，只有帖子层滑动；画面裁切在手机宽度内。 */
+html[data-page-motion]::view-transition-group(root){animation:none;overflow:clip;clip-path:inset(0 max(0px,calc((100vw - var(--app-width))/2)))}
+html[data-page-motion]::view-transition-old(root),html[data-page-motion]::view-transition-new(root){height:100%;object-fit:none;object-position:top;clip-path:inset(0 max(0px,calc((100vw - var(--app-width))/2)));mix-blend-mode:normal;opacity:1;animation-duration:380ms;animation-timing-function:cubic-bezier(.2,.8,.2,1);animation-fill-mode:both}
+html[data-page-motion="push"]::view-transition-old(root){animation:none;z-index:1}
+html[data-page-motion="push"]::view-transition-new(root){animation-name:page-slide-in;z-index:2}
+html[data-page-motion="pop"]::view-transition-old(root){animation-name:page-slide-out;z-index:2}
+html[data-page-motion="pop"]::view-transition-new(root){animation:none;z-index:1}
+@keyframes page-slide-in{from{transform:translateX(min(100vw,var(--app-width)))}to{transform:translateX(0)}}
+@keyframes page-slide-out{from{transform:translateX(0)}to{transform:translateX(min(100vw,var(--app-width)))}}
+@media(prefers-reduced-motion:reduce){::view-transition-group(root),::view-transition-old(root),::view-transition-new(root){animation:none!important}}
+
+/* 回复抽屉：底部上滑覆盖层，不改变帖子滚动位置。 */
+html.composing,html.composing body{overflow:hidden}
+.sheet-backdrop{position:fixed;inset:0;z-index:30;background:#0f1a2640;opacity:0;visibility:hidden;transition:opacity .24s ease,visibility 0s .24s;touch-action:none}
+html.composing .sheet-backdrop{opacity:1;visibility:visible;transition:opacity .24s ease}
+.composer{position:fixed;left:50%;bottom:var(--keyboard,0px);z-index:31;width:min(100%,var(--app-width));display:grid;gap:10px;padding:10px 16px max(12px,env(safe-area-inset-bottom));background:#fff;border-radius:14px 14px 0 0;box-shadow:0 -6px 24px #0f1a261a;transform:translate(-50%,100%);visibility:hidden;transition:transform .28s cubic-bezier(.2,.8,.2,1),visibility 0s .28s}
+html.composing .composer{transform:translate(-50%,0);visibility:visible;transition:transform .28s cubic-bezier(.2,.8,.2,1)}
+html.composing:has(.composer textarea:focus) .composer{padding-bottom:12px}
+.composer-head{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;min-height:34px}
+.composer-head label{font-size:15px;font-weight:600;max-width:60vw;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.composer-cancel{justify-self:start;color:var(--text-secondary);font-size:15px;padding:6px 0}
+.composer-send{justify-self:end;background:var(--brand);color:#fff;padding:6px 16px;border-radius:16px;font-size:14px}
+.composer textarea{width:100%;height:112px;max-height:40vh;resize:none;padding:10px 12px;border:0;border-radius:10px;background:var(--input);color:var(--text);outline:0}
+.composer textarea:focus-visible{outline:2px solid #b9d3ee;outline-offset:0}
+@media(prefers-reduced-motion:reduce){.sheet-backdrop,.composer{transition:none!important}}
+
+/* 右划返回：帖子层跟手移动，底下是首页快照。 */
+#app.swiping{position:relative;z-index:3;will-change:transform}
+#app.swiping .phone{box-shadow:-10px 0 30px #0f1a2626}
+.swipe-under{position:fixed;inset:0;z-index:1;overflow:hidden;background:var(--canvas);pointer-events:none;will-change:transform}
+.swipe-shade{position:fixed;inset:0;z-index:2;background:#000;opacity:.18;pointer-events:none}
+
+/* 首页回复气泡：按回复数分 4 档，>2000 最深，<500 最浅 */
+.reply-count.heat-0 svg{color:#bcd3ec;fill:#bcd3ec}.reply-count.heat-1 svg{color:#7ca7d4;fill:#7ca7d4}.reply-count.heat-2 svg{color:#3f7cc0;fill:#3f7cc0}.reply-count.heat-3 svg{color:#1b4f8f;fill:#1b4f8f}
+/* 自己的评论：删除（点两次确认） */
+.comment footer .comment-delete{margin-left:auto;color:#b4b8bd}.comment footer .comment-delete[data-confirm="1"]{color:#e0505f}
+/* 底栏点赞／收藏：选中后图标变为实心 */
+.detail .bottom button[aria-pressed=true],.detail .bottom button[aria-pressed=true] svg,.detail .bottom button[aria-pressed=true] small,.detail .bottom button[aria-pressed=true] span{color:var(--brand)}.detail .bottom button[aria-pressed=true] svg{fill:currentColor}

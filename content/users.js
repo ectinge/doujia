@@ -24,7 +24,6 @@ window.DOJIA_USERS = {
   "C2": P("db_pharma"), // 小零制药
   "D2": P("db_suspicious"), // 哥你疑心病别这么重
   "F2": P("xhs_crying"), // 含泪变性法哭男友
-  "M2": P("xhs_waiting"), // 你试过从天黑等到天亮的滋味吗
   "G2": P("wb_midnight"), // 午夜罗曼蒂克小妈
   "A2": P("db_sheep"), // 一🐏迁徙
   "H2": P("dy_intestine"), // 我不吃肥肠爱吃你吃吧

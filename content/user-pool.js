@@ -8,12 +8,7 @@ window.DOUJIA_USER_POOL = {
   special: {
     db_juice: {"name": "🧃", "avatar": "assets/avatars/users/db_juice.jpg", "ip": "北京", "fallback": "汁", "uid": "226440972", "src": "豆瓣·juice"},
     db_momo_guangxi: {"name": "momo", "avatar": "assets/avatars/users/db_momo_guangxi.jpg", "ip": "广西", "fallback": "M", "uid": "953483383", "src": "豆瓣·momo_guangxi"},
-    db_worse: {"name": "明天会更坏", "avatar": "assets/avatars/users/db_worse.jpg", "ip": "广东", "fallback": "坏", "uid": "310813149", "src": "豆瓣·worse"},
-    wb_shanliang: {"name": "善良是你的谎言私联是你的底裤", "avatar": "assets/avatars/users/wb_shanliang.jpg", "ip": "北京", "fallback": "善", "uid": "991383496", "src": "微博·shanliang"},
-    wb_tingdao: {"name": "我真不是故意听到的", "avatar": "assets/avatars/users/wb_tingdao.jpg", "ip": "浙江", "fallback": "听", "uid": "673041233", "src": "微博·tingdao", "note": "情感博主"},
-    qq_stop: {"name": "别嬷了这真是我哥", "avatar": "assets/avatars/users/qq_stop.jpg", "ip": "江西", "fallback": "哥", "uid": "331935728", "src": "QQ·stop", "note": "IP为补全"},
-    qq_table: {"name": "正主夹菜我转桌", "avatar": "assets/avatars/users/qq_table.jpg", "ip": "江苏", "fallback": "桌", "uid": "520544150", "src": "QQ·table", "note": "IP为补全"},
-    qq_tv: {"name": "爱吃TV", "avatar": "assets/avatars/users/qq_tv.jpg", "ip": "辽宁", "fallback": "爱", "uid": "203200788", "src": "QQ·tv", "note": "IP为补全", "tags": ["暂不使用"]}
+    db_worse: {"name": "明天会更坏", "avatar": "assets/avatars/users/db_worse.jpg", "ip": "广东", "fallback": "坏", "uid": "310813149", "src": "豆瓣·worse"}
   },
   general: {
     db_bed: {"name": "不想起床", "avatar": "assets/avatars/users/db_bed.jpg", "ip": "广东", "fallback": "床", "uid": "368290228", "src": "豆瓣·bed"},
@@ -44,7 +39,7 @@ window.DOUJIA_USER_POOL = {
     db_obubble: {"name": "O泡裹奶", "avatar": "assets/avatars/users/db_obubble.jpg", "ip": "山东", "fallback": "O", "uid": "791888064", "src": "豆瓣·obubble"},
     db_orange: {"name": "橘子汽水", "avatar": null, "ip": "中国台湾", "fallback": "橘", "uid": "385625615", "src": "豆瓣·orange", "note": "原项目无头像，使用默认首字头像；海外IP", "srcIp": "上海"},
     db_peach: {"name": "桃子不逃", "avatar": null, "ip": "中国香港", "fallback": "桃", "uid": "416708285", "src": "豆瓣·peach", "note": "原项目无头像，使用默认首字头像；海外IP", "srcIp": "湖北"},
-    db_peanuts: {"name": "花生瓜子矿泉水", "avatar": "assets/avatars/users/db_peanuts.jpg", "ip": "河北", "fallback": "花", "uid": "503088545", "src": "豆瓣·peanuts"},
+    db_peanuts: {"name": "花生瓜子矿泉水", "avatar": "assets/avatars/users/db_peanuts.jpg", "ip": "英国", "fallback": "花", "uid": "503088545", "src": "豆瓣·peanuts", "srcIp": "河北", "note": "海外IP"},
     db_pharma: {"name": "小零制药", "avatar": "assets/avatars/users/db_pharma.jpg", "ip": "江苏", "fallback": "药", "uid": "374654250", "src": "豆瓣·pharma"},
     db_serendipity: {"name": "_Serendipity🌅", "avatar": "assets/avatars/users/db_serendipity.jpg", "ip": "广东", "fallback": "S", "uid": "935993027", "src": "豆瓣·serendipity"},
     db_sheep: {"name": "一🐏迁徙", "avatar": "assets/avatars/users/db_sheep.jpg", "ip": "云南", "fallback": "羊", "uid": "900550608", "src": "豆瓣·sheep"},
@@ -84,7 +79,7 @@ window.DOUJIA_USER_POOL = {
     wb_chuntao: {"name": "春桃酱", "avatar": "assets/avatars/users/wb_chuntao.jpg", "ip": "湖北", "fallback": "桃", "uid": "888849736", "src": "微博·chuntao"},
     wb_duantou: {"name": "拼好断头饭", "avatar": "assets/avatars/users/wb_duantou.jpg", "ip": "山东", "fallback": "拼", "uid": "650028361", "src": "微博·duantou"},
     wb_koikuma: {"name": "Koikuma_0219", "avatar": "assets/avatars/users/wb_koikuma.jpg", "ip": "北京", "fallback": "K", "uid": "899852920", "src": "微博·koikuma"},
-    wb_midnight: {"name": "午夜罗曼蒂克小妈", "avatar": null, "ip": "上海", "fallback": "夜", "uid": "782511583", "src": "微博·midnight", "note": "原项目无头像，使用默认首字头像"},
+    wb_midnight: {"name": "午夜罗曼蒂克小妈", "avatar": "assets/avatars/users/wb_midnight.svg", "ip": "上海", "fallback": "夜", "uid": "782511583", "src": "微博·midnight", "note": "原项目无头像，使用粉紫渐变头像"},
     wb_poppy: {"name": "Oo。Poppy。oO", "avatar": null, "ip": "上海", "fallback": "P", "uid": "383455567", "src": "微博·poppy", "note": "原项目无头像，使用默认首字头像"},
     wb_tree: {"name": "浇死公司发财树", "avatar": "assets/avatars/users/wb_tree.jpg", "ip": "江苏", "fallback": "浇", "uid": "225674550", "src": "微博·tree"},
     dy_intestine: {"name": "我不吃肥肠爱吃你吃吧", "avatar": "assets/avatars/users/dy_intestine.jpg", "ip": "湖南", "fallback": "肠", "uid": "265699741", "src": "抖音·intestine"},
@@ -97,7 +92,10 @@ window.DOUJIA_USER_POOL = {
     dy_yun: {"name": "芸吖吖", "avatar": "assets/avatars/users/dy_yun.jpg", "ip": "江苏", "fallback": "芸", "uid": "503793599", "src": "抖音·yun"},
     qq_mw: {"name": "猛扇mw传媒那一夜", "avatar": "assets/avatars/users/qq_mw.svg", "ip": "安徽", "fallback": "猛", "uid": "413235866", "src": "QQ·mw", "note": "IP为补全"},
     qq_raspberry: {"name": "小树莓儿", "avatar": "assets/avatars/users/qq_raspberry.jpg", "ip": "河南", "fallback": "莓", "uid": "932530326", "src": "QQ·raspberry", "note": "IP为补全；管理员"},
-    qq_toast: {"name": "可可烤面包", "avatar": "assets/avatars/users/qq_toast.jpg", "ip": "重庆", "fallback": "包", "uid": "329951844", "src": "QQ·toast", "note": "IP为补全"}
+    qq_toast: {"name": "可可烤面包", "avatar": "assets/avatars/users/qq_toast.jpg", "ip": "重庆", "fallback": "包", "uid": "329951844", "src": "QQ·toast", "note": "IP为补全"},
+    qq_stop: {"name": "别嬷了这真是我哥", "avatar": "assets/avatars/users/qq_stop.jpg", "ip": "江西", "fallback": "哥", "uid": "331935728", "src": "QQ·stop", "note": "IP为补全"},
+    qq_table: {"name": "正主夹菜我转桌", "avatar": "assets/avatars/users/qq_table.jpg", "ip": "江苏", "fallback": "桌", "uid": "520544150", "src": "QQ·table", "note": "IP为补全"},
+    qq_tv: {"name": "爱吃TV", "avatar": "assets/avatars/users/qq_tv.jpg", "ip": "辽宁", "fallback": "爱", "uid": "203200788", "src": "QQ·tv", "note": "IP为补全", "tags": ["暂不使用"]}
   },
   // 未被任何历史项目使用的备用头像
   avatarPool: ["assets/avatars/users/pool_01.jpg", "assets/avatars/users/pool_02.jpg", "assets/avatars/users/pool_03.jpg"],

@@ -1,12 +1,12 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 256 256">
+  <!-- Generator: Adobe Illustrator 30.0.0, SVG Export Plug-In . SVG Version: 2.1.1 Build 123)  -->
   <defs>
-    <radialGradient id="g" cx="35%" cy="28%" r="85%">
-      <stop offset="0" stop-color="#ffb2ef"/>
-      <stop offset="0.38" stop-color="#ff35c8"/>
-      <stop offset="1" stop-color="#f0008f"/>
-    </radialGradient>
+    <style>
+      .st0 {
+        fill: #f0008f;
+      }
+    </style>
   </defs>
-  <rect width="256" height="256" rx="128" fill="url(#g)"/>
-  <circle cx="128" cy="128" r="112" fill="none" stroke="#ffdcf5" stroke-opacity=".72" stroke-width="5"/>
-  <text x="128" y="158" text-anchor="middle" font-family="PingFang SC, sans-serif" font-size="96" font-weight="700" fill="#fff">猛</text>
+  <rect class="st0" y="0" width="256" height="256"/>
 </svg>

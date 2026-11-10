@@ -8,8 +8,8 @@ window.DOJIA_USERS = {
   "CP2": P("db_duck"), // 冰岛大肥鸭
   "J1": P("xhs_drunk"), // SlightlyDrunk
   "K1": P("db_bed"), // 不想起床
-  "L1": P("db_liar"), // 江湖骗子
-  "B1": P("xhs_breeze"), // breeze&chill
+  "L1": P("db_momo_anhui"), // momo
+  "B1": P("db_momo_zhejiang"), // momo
   "M1": P("xhs_ideal"), // 你的理想还长存吗
   "N1": P("xhs_unsubscribe"), // 求人生退订教程
   "PGZ": P("db_juice"), // 🧃
@@ -31,7 +31,7 @@ window.DOJIA_USERS = {
   "I2": P("xhs_pancake"), // 煎饼狗子
   "J2": P("qq_mw"), // 猛扇mw传媒那一夜
   "A3": P("db_sophia", { ip: "安徽" }), // Sophia704
-  "D3": P("dy_yang"), // 杨小五
+  "D3": P("db_momo_liaoning"), // momo
   "E3": P("dy_sunkissed"), // -Sunkissed-
   "C3": P("db_ysu"), // YsuLx_Tw
   "F3": P("db_meat"), // 将中产细细切作臊子

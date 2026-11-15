@@ -24,6 +24,7 @@
 | `templates/写作模板.md` | 先写内容的结构模板与字段说明 |
 | `templates/帖子数据模板.js` | 可复制到帖子数组中的对象模板 |
 | `style.css` | 蓝色主题、首页、响应式布局与交互样式 |
+| `dark.css` | 暗色主题，系统切到深色模式时自动生效；只覆盖颜色，不改布局 |
 | `post-base.css` | 从原 douban demo 复制的帖子视觉基础 |
 
 所有素材路径相对 `index.html`，不是相对 `content/`。更换版头背景请替换 `assets/images/cover.svg`，或修改 `style.css` 的 `.hero` 背景路径。更改主题搜索 `#397abe` 与 `--brand`。

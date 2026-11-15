@@ -1,0 +1,68 @@
+/* 暗色主题：仅在系统为深色模式时生效，浅色样式不变。
+   原则：正文 ≥ 7:1，次要文字 ≥ 4.5:1；热度气泡在暗色下“越热越亮”。 */
+:root{color-scheme:light dark}
+@media (prefers-color-scheme:dark){
+:root{
+  --bg:#16191d;
+  --brand:#6aa8ea; --brand-action:#7ab2ee; --brand-soft:#1c2f44; --brand-disabled:#3b5571;
+  --text:#e6e9ed; --text-secondary:#a3abb4; --text-tertiary:#8b939c; --text-faint:#7d858e;
+  --line:#272c32; --line-strong:#343a42; --surface:#20252b; --surface-muted:#0e1013; --canvas:#0b0d10;
+  --input:#232930; --input-text:#8e98a3; --featured:#e0566a;
+  --shadow:#0006; --hairline:#ffffff14;
+  --white-0:#16191d00; --white-72:#ffffffb8; --white-94:#16191df0; --white-98:#16191dfa;
+  --head:#1e3a59;
+}
+body{background:var(--canvas)}
+.phone{background:var(--bg);box-shadow:0 5px 40px #0008}
+
+/* 顶部：主题蓝压暗，避免夜间刺眼 */
+.sitebar,.compact{background:var(--head)}
+.hero{background:linear-gradient(0deg,var(--head) 22%,#1e3a59d9),url('assets/images/cover.svg') center/cover}
+.search{background:#ffffff1f}
+.search input::placeholder{color:#b8c9dc}
+.group-summary small,.compact small{color:#b3c6db}
+.intro{color:#c3d3e4}
+.join{background:#e3ebf4;color:var(--head)}
+
+/* 首页列表 */
+.discussion{background:#16191df5;border-bottom-color:var(--line)}
+.filters{background:var(--surface)}
+.filters button{color:var(--text-tertiary)}
+.filters .selected{color:var(--text);background:#2c323a;border-color:#3b424b;box-shadow:none}
+.thread-main{border-bottom-color:var(--line)}
+.reply-count{color:var(--text-tertiary)}
+.thread-meta{color:var(--text-secondary)}
+.thread-meta time{color:var(--text-tertiary)}
+.end{color:var(--text-tertiary)}
+.reply-count.heat-0 svg{color:#3a4d63;fill:#3a4d63}
+.reply-count.heat-1 svg{color:#52789f;fill:#52789f}
+.reply-count.heat-2 svg{color:#6fa3dc;fill:#6fa3dc}
+.reply-count.heat-3 svg{color:#a9d0fa;fill:#a9d0fa}
+
+/* 帖子与回复 */
+.long-fade{background:linear-gradient(var(--white-0),var(--white-94) 65%,var(--bg))}
+.comment footer button{color:var(--text-secondary)}
+.comment footer .comment-delete{color:var(--text-faint)}
+.comment footer .comment-delete[data-confirm="1"]{color:#ff7a88}
+.poll button{background:var(--surface)}
+.poll button:not(:disabled){background:var(--brand);color:#0d1724}
+.poll button:disabled{background:#2a3644;color:#7f8fa0}
+.poll button.revote{background:var(--brand-soft);color:var(--brand);border-color:#2f4a66}
+.poll-track{background:#2a323b}
+.featured,h1 i{color:#fff}
+
+/* 底栏：暗色下用不透明底，避免正文透出 */
+.bottom{background:var(--bg)}
+
+/* 浮层 */
+.toast-item{background:#3a424bf2;color:#f1f3f5}
+.sheet-backdrop{background:#00000099}
+.composer{background:#1d2126;box-shadow:0 -6px 24px #0008}
+.composer textarea::placeholder{color:#8c97a3}
+.composer textarea:focus-visible{outline-color:#3d6a99}
+.composer-send{color:#0d1724}
+.swipe-shade{opacity:.35}
+
+/* 图片略降亮度，减少夜间眩光；点开大图时恢复原图 */
+.media img,.thread-thumb,.link-card img{filter:brightness(.92)}
+}

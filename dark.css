@@ -1,68 +1,99 @@
 /* 暗色主题：仅在系统为深色模式时生效，浅色样式不变。
-   原则：正文 ≥ 7:1，次要文字 ≥ 4.5:1；热度气泡在暗色下“越热越亮”。 */
+   分层：画布 #090a0c ＜ 页面 #131518 ＜ 分区带 #202429 ＜ 卡片／引用 #2a2f36 ＜ 控件 #353a42
+   顶栏、底栏、吸顶栏用“抬升层” #1f2328 + 分隔线，与页面区分。
+   文字：正文 ≥ 12:1，昵称 ≥ 9:1，时间／IP 等元信息 ≥ 4.5:1 且明显暗于昵称。 */
 :root{color-scheme:light dark}
 @media (prefers-color-scheme:dark){
 :root{
-  --bg:#16191d;
-  --brand:#6aa8ea; --brand-action:#7ab2ee; --brand-soft:#1c2f44; --brand-disabled:#3b5571;
-  --text:#e6e9ed; --text-secondary:#a3abb4; --text-tertiary:#8b939c; --text-faint:#7d858e;
-  --line:#272c32; --line-strong:#343a42; --surface:#20252b; --surface-muted:#0e1013; --canvas:#0b0d10;
-  --input:#232930; --input-text:#8e98a3; --featured:#e0566a;
-  --shadow:#0006; --hairline:#ffffff14;
-  --white-0:#16191d00; --white-72:#ffffffb8; --white-94:#16191df0; --white-98:#16191dfa;
-  --head:#1e3a59;
+  --bg:#131518; --raised:#1f2328; --band:#202429; --card:#2a2f36; --control:#353a42;
+  --brand:#6aa8ea; --brand-action:#7ab2ee; --brand-soft:#1d3047; --brand-disabled:#3b5571;
+  --text:#e8ebee; --text-name:#c3cad2; --text-secondary:#a1a9b2; --text-tertiary:#858d96; --text-faint:#7c848d;
+  --line:#2c3138; --line-strong:#3a4048; --surface:var(--card); --surface-muted:var(--band); --canvas:#090a0c;
+  --input:var(--control); --input-text:#a8b1ba; --featured:#e0566a;
+  --shadow:#0008; --hairline:#ffffff1a;
+  --white-0:#13151800; --white-72:#ffffffb8; --white-94:#131518f0; --white-98:#131518fa;
+  --head:#1f3c5c; --head-line:#2e5276;
 }
 body{background:var(--canvas)}
-.phone{background:var(--bg);box-shadow:0 5px 40px #0008}
+.phone{background:var(--bg);box-shadow:0 0 0 1px #ffffff0d,0 5px 40px #000a}
 
-/* 顶部：主题蓝压暗，避免夜间刺眼 */
+/* ── 顶部（站点栏、版头、帖子吸顶栏）：压暗的品牌蓝，下缘加分隔线 ── */
 .sitebar,.compact{background:var(--head)}
-.hero{background:linear-gradient(0deg,var(--head) 22%,#1e3a59d9),url('assets/images/cover.svg') center/cover}
+.compact{border-bottom:1px solid var(--head-line)}
+.hero{background:linear-gradient(0deg,var(--head) 22%,#1f3c5cd9),url('assets/images/cover.svg') center/cover}
 .search{background:#ffffff1f}
-.search input::placeholder{color:#b8c9dc}
-.group-summary small,.compact small{color:#b3c6db}
-.intro{color:#c3d3e4}
+.search input::placeholder{color:#bccbdc}
+.group-summary small,.compact small{color:#b6c8dc}
+.intro{color:#c6d5e5}
 .join{background:#e3ebf4;color:var(--head)}
 
-/* 首页列表 */
-.discussion{background:#16191df5;border-bottom-color:var(--line)}
-.filters{background:var(--surface)}
+/* ── 首页列表 ── */
+.discussion{background:var(--raised);border-bottom:1px solid var(--line)}
+.filters{background:var(--bg);box-shadow:inset 0 0 0 1px var(--line)}
 .filters button{color:var(--text-tertiary)}
-.filters .selected{color:var(--text);background:#2c323a;border-color:#3b424b;box-shadow:none}
+.filters .selected{color:var(--text);background:var(--control);border-color:#454c55;box-shadow:none}
 .thread-main{border-bottom-color:var(--line)}
 .reply-count{color:var(--text-tertiary)}
-.thread-meta{color:var(--text-secondary)}
+.thread-meta{color:var(--text-name)}
 .thread-meta time{color:var(--text-tertiary)}
 .end{color:var(--text-tertiary)}
-.reply-count.heat-0 svg{color:#3a4d63;fill:#3a4d63}
-.reply-count.heat-1 svg{color:#52789f;fill:#52789f}
-.reply-count.heat-2 svg{color:#6fa3dc;fill:#6fa3dc}
-.reply-count.heat-3 svg{color:#a9d0fa;fill:#a9d0fa}
+.home>.end{background:var(--band)}
+.reply-count.heat-0 svg{color:#3d516a;fill:#3d516a}
+.reply-count.heat-1 svg{color:#557ca6;fill:#557ca6}
+.reply-count.heat-2 svg{color:#72a6df;fill:#72a6df}
+.reply-count.heat-3 svg{color:#acd2fb;fill:#acd2fb}
 
-/* 帖子与回复 */
+/* ── 帖子 ── */
+.post>header strong{color:var(--text)}
+.meta{color:var(--text-tertiary)}
+.stats{border-top-color:var(--band);border-bottom-color:var(--line)}
+.stats span{color:var(--text-tertiary)}
+.stats .active{color:var(--text)}
+.notice{color:var(--text-tertiary)}
 .long-fade{background:linear-gradient(var(--white-0),var(--white-94) 65%,var(--bg))}
+.long-fade span{background:var(--control);border-color:#454c55;color:var(--text-secondary)}
+.media-shell{background:var(--band)}
+.link-card{background:var(--card);box-shadow:inset 0 0 0 1px var(--line)}
+
+/* ── 回复：昵称亮、时间／IP 暗，引用为独立卡片 ── */
+.comment{border-bottom-color:var(--line)}
+.comment-name{color:var(--text-name)}
+.comment .meta{color:var(--text-tertiary)}
+.comments h2{color:var(--text-secondary)}
+blockquote{background:var(--card);border-left:3px solid #4a5560;color:var(--text-secondary)}
+blockquote b{color:var(--text-name)}
+.owner-badge{background:var(--control);color:#c3cad2}
+.section-divider,.comment-gap,.replies-end{background:var(--band)}
+.comment-gap{color:var(--text-tertiary);border-block:1px solid var(--line)}
 .comment footer button{color:var(--text-secondary)}
 .comment footer .comment-delete{color:var(--text-faint)}
 .comment footer .comment-delete[data-confirm="1"]{color:#ff7a88}
-.poll button{background:var(--surface)}
+
+/* ── 投票 ── */
+.poll{background:var(--card)}
+.poll-choice{border-bottom-color:var(--line-strong)}
+.poll button{background:var(--control)}
 .poll button:not(:disabled){background:var(--brand);color:#0d1724}
-.poll button:disabled{background:#2a3644;color:#7f8fa0}
+.poll button:disabled{background:#2a3644;color:#8495a8}
 .poll button.revote{background:var(--brand-soft);color:var(--brand);border-color:#2f4a66}
-.poll-track{background:#2a323b}
+.poll-track{background:var(--control)}
 .featured,h1 i{color:#fff}
 
-/* 底栏：暗色下用不透明底，避免正文透出 */
-.bottom{background:var(--bg)}
+/* ── 底栏：抬升层 + 上分隔线，输入框再亮一层 ── */
+.bottom{background:var(--raised);border-top:1px solid var(--line-strong)}
+.reply-input{background:var(--control)}
 
-/* 浮层 */
-.toast-item{background:#3a424bf2;color:#f1f3f5}
-.sheet-backdrop{background:#00000099}
-.composer{background:#1d2126;box-shadow:0 -6px 24px #0008}
-.composer textarea::placeholder{color:#8c97a3}
+/* ── 浮层 ── */
+.toast-item{background:#e8ebee;color:#14171a;box-shadow:0 4px 18px #000a}
+.sheet-backdrop{background:#000000a6}
+.composer{background:var(--raised);border-top:1px solid var(--line-strong);box-shadow:0 -6px 24px #000a}
+.composer-head label{color:var(--text)}
+.composer textarea{background:var(--control)}
+.composer textarea::placeholder{color:#a8b1ba}
 .composer textarea:focus-visible{outline-color:#3d6a99}
 .composer-send{color:#0d1724}
-.swipe-shade{opacity:.35}
+.swipe-shade{opacity:.4}
 
-/* 图片略降亮度，减少夜间眩光；点开大图时恢复原图 */
+/* 图片略降亮度，减少夜间眩光；点开大图时显示原图 */
 .media img,.thread-thumb,.link-card img{filter:brightness(.92)}
 }

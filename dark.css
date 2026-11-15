@@ -1,13 +1,14 @@
 /* 暗色主题：仅在系统为深色模式时生效，浅色样式不变。
-   分层：画布 #090a0c ＜ 页面 #131518 ＜ 分区带 #202429 ＜ 卡片／引用 #2a2f36 ＜ 控件 #353a42
-   顶栏、底栏、吸顶栏用“抬升层” #1f2328 + 分隔线，与页面区分。
+   分层：画布 #090a0c ＜ 页面 #131518 ＜ 分区带 #24282e ＜ 卡片／引用 #2a2f36 ＜ 控件 #353a42
+   与浅色主题同一逻辑：浅色里靠底色区分的（引用、折叠条、分区），暗色也只用底色区分，不额外加线。
+   顶栏、底栏、吸顶栏用“抬升层” #1f2328。
    文字：正文 ≥ 12:1，昵称 ≥ 9:1，时间／IP 等元信息 ≥ 4.5:1 且明显暗于昵称。 */
 :root{color-scheme:light dark}
 @media (prefers-color-scheme:dark){
 :root{
-  --bg:#131518; --raised:#1f2328; --band:#202429; --card:#2a2f36; --control:#353a42;
+  --bg:#131518; --raised:#1f2328; --band:#24282e; --card:#2a2f36; --control:#353a42;
   --brand:#6aa8ea; --brand-action:#7ab2ee; --brand-soft:#1d3047; --brand-disabled:#3b5571;
-  --text:#e8ebee; --text-name:#c3cad2; --text-secondary:#a1a9b2; --text-tertiary:#858d96; --text-faint:#7c848d;
+  --text:#e8ebee; --text-name:#d8dde3; --text-secondary:#a1a9b2; --text-tertiary:#858d96; --text-faint:#7c848d;
   --line:#2c3138; --line-strong:#3a4048; --surface:var(--card); --surface-muted:var(--band); --canvas:#090a0c;
   --input:var(--control); --input-text:#a8b1ba; --featured:#e0566a;
   --shadow:#0008; --hairline:#ffffff1a;
@@ -19,7 +20,6 @@ body{background:var(--canvas)}
 
 /* ── 顶部（站点栏、版头、帖子吸顶栏）：压暗的品牌蓝，下缘加分隔线 ── */
 .sitebar,.compact{background:var(--head)}
-.compact{border-bottom:1px solid var(--head-line)}
 .hero{background:linear-gradient(0deg,var(--head) 22%,#1f3c5cd9),url('assets/images/cover.svg') center/cover}
 .search{background:#ffffff1f}
 .search input::placeholder{color:#bccbdc}
@@ -29,7 +29,7 @@ body{background:var(--canvas)}
 
 /* ── 首页列表 ── */
 .discussion{background:var(--raised);border-bottom:1px solid var(--line)}
-.filters{background:var(--bg);box-shadow:inset 0 0 0 1px var(--line)}
+.filters{background:var(--card)}
 .filters button{color:var(--text-tertiary)}
 .filters .selected{color:var(--text);background:var(--control);border-color:#454c55;box-shadow:none}
 .thread-main{border-bottom-color:var(--line)}
@@ -53,18 +53,18 @@ body{background:var(--canvas)}
 .long-fade{background:linear-gradient(var(--white-0),var(--white-94) 65%,var(--bg))}
 .long-fade span{background:var(--control);border-color:#454c55;color:var(--text-secondary)}
 .media-shell{background:var(--band)}
-.link-card{background:var(--card);box-shadow:inset 0 0 0 1px var(--line)}
+.link-card{background:var(--card)}
 
 /* ── 回复：昵称亮、时间／IP 暗，引用为独立卡片 ── */
 .comment{border-bottom-color:var(--line)}
 .comment-name{color:var(--text-name)}
 .comment .meta{color:var(--text-tertiary)}
 .comments h2{color:var(--text-secondary)}
-blockquote{background:var(--card);border-left:3px solid #4a5560;color:var(--text-secondary)}
+blockquote{background:var(--card);color:var(--text-secondary)}
 blockquote b{color:var(--text-name)}
 .owner-badge{background:var(--control);color:#c3cad2}
 .section-divider,.comment-gap,.replies-end{background:var(--band)}
-.comment-gap{color:var(--text-tertiary);border-block:1px solid var(--line)}
+.comment-gap{color:#9199a2}
 .comment footer button{color:var(--text-secondary)}
 .comment footer .comment-delete{color:var(--text-faint)}
 .comment footer .comment-delete[data-confirm="1"]{color:#ff7a88}
@@ -80,13 +80,13 @@ blockquote b{color:var(--text-name)}
 .featured,h1 i{color:#fff}
 
 /* ── 底栏：抬升层 + 上分隔线，输入框再亮一层 ── */
-.bottom{background:var(--raised);border-top:1px solid var(--line-strong)}
+.bottom{background:var(--raised)}
 .reply-input{background:var(--control)}
 
 /* ── 浮层 ── */
 .toast-item{background:#e8ebee;color:#14171a;box-shadow:0 4px 18px #000a}
 .sheet-backdrop{background:#000000a6}
-.composer{background:var(--raised);border-top:1px solid var(--line-strong);box-shadow:0 -6px 24px #000a}
+.composer{background:var(--raised);box-shadow:0 -6px 24px #000a}
 .composer-head label{color:var(--text)}
 .composer textarea{background:var(--control)}
 .composer textarea::placeholder{color:#a8b1ba}

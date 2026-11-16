@@ -56,3 +56,7 @@
 - 点击“写回复”或评论下的“回复”，回复框从底部上滑为覆盖层，帖子保持原位不滚动；点击遮罩、“取消”或按 Esc 收起，未发布的文字在同一回复对象下保留。
 - 输入法：Android 通过 viewport 的 `interactive-widget=resizes-content` 让页面让出键盘高度；iOS 通过 `visualViewport` 计算键盘高度，抽屉贴在键盘上方。
 - 帖子内向右划动（从屏幕任意位置）可返回首页：页面跟手移动、底下露出首页；划过约 1/3 宽度或快速轻划即返回，否则回弹。iOS Safari 自带的左边缘返回手势同样可用，此时跳过站内动画，避免重复。
+
+## AO3 卡片人数图片
+
+`assets/ao3/members.svg` 由 `tools/ao3-badge.js` 根据 `content/group.js` 的人数生成。推送修改过的 `group.js` 后，GitHub Actions（`.github/workflows/ao3-badge.yml`）会自动重新生成并提交，之后需在 GitHub Desktop 中先 Fetch／Pull 再继续提交。

@@ -1,0 +1,25 @@
+# 修改 content/group.js 并推送后，自动重新生成 AO3 卡片用的人数图片。
+name: AO3 member badge
+on:
+  push:
+    paths: ['content/group.js', 'tools/ao3-badge.js']
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  badge:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: 20 }
+      - run: node tools/ao3-badge.js
+      - name: Commit if changed
+        run: |
+          if ! git diff --quiet -- assets/ao3/members.svg; then
+            git config user.name "github-actions[bot]"
+            git config user.email "41898283+github-actions[bot]@users.noreply.github.com"
+            git add assets/ao3/members.svg
+            git commit -m "Update AO3 member badge"
+            git push
+          fi
